@@ -24,10 +24,6 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'welcome',
-    component: WelcomeComponent
   }
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
