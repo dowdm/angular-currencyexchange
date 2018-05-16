@@ -9,12 +9,12 @@ header {
 footer {
   position: fixed;
   left: 0;
-    bottom: 0;
-    height: 7%;
-    width: 100%;
-    text-align: center;
-    text-decoration: underline;
-    background-color: rgb(215, 219, 224, 0.7);
+  bottom: 0;
+  height: 7%;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  background-color: rgb(215, 219, 224, 0.7);
 }
 a {
   color: blue;

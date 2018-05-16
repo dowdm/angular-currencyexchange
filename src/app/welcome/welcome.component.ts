@@ -14,8 +14,8 @@ export class WelcomeComponent implements OnInit {
   constructor() {}
 
   ngDoCheck() {
-      this.user = firebase.auth().currentUser;
-    }
+    this.user = firebase.auth().currentUser;
+  }
 
   ngOnInit() {
   }
