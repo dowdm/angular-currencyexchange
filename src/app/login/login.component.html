@@ -176,7 +176,7 @@
           <option value="ZWL">Zimbabwe Dollar</option>
           <option value="PLN">Zloty</option>
         </select>
-      <button type="button" name="button" (click)="triggerBuyRequest(account, destination.value, amount.value)">Buy Currency</button>
+      <button type="button" name="button" (click)="triggerBuyRequest(account, destination.value, amount.value)" class="btn btn-danger">Buy Currency</button>
       <p>{{result}}</p>
       <input type="number" name=""placeholder="$0" #amount2>
       <label for="">Crypto to purchase:</label>
@@ -204,7 +204,7 @@
         <option value="WAVES">Waves Platform</option>
         <option value="ZEC">Zcash</option>
       </select>
-      <button type="button" name="button" (click)="triggerBuyCryptoRequest(account, symbol.value, amount2.value)">Buy Crypto</button>
+      <button type="button" name="button" (click)="triggerBuyCryptoRequest(account, symbol.value, amount2.value)" class = "btn btn-danger">Buy Crypto</button>
       <p>{{rate2}}</p>
       <p>{{result2}}</p>
   </div>
