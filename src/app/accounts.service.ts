@@ -10,7 +10,7 @@ export class AccountsService {
 
   constructor(private database: AngularFireDatabase) {
     this.accounts = database.list('accounts');
-   }
+  }
 
   getAccounts(){
     return this.accounts;
@@ -23,8 +23,8 @@ export class AccountsService {
 
 
   balanceUpdate(accountToUpdate, amount){
-     var accountEntryInFirebase = this.getAccountById(accountToUpdate.$key);
-     accountEntryInFirebase.update({balance: accountToUpdate.balance -= parseInt(amount)});
+    var accountEntryInFirebase = this.getAccountById(accountToUpdate.$key);
+    accountEntryInFirebase.update({balance: accountToUpdate.balance -= parseInt(amount)});
 
    }
 
@@ -33,3 +33,4 @@ export class AccountsService {
       accountEntryInFirebase.update({assets: accountToUpdate.assets + result + destination+'; '});
   }
  }
+

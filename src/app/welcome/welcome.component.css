@@ -1,0 +1,17 @@
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: black;
+
+}
+h3 {
+  text-align: center;
+  color: black;
+}
+.buttons {
+  margin-left: 33%;
+  margin-right: 30%
+}
+img {
+  opacity: 0.5;
+}
