@@ -31,7 +31,9 @@
       <option value="USD">US dollar</option>
       <option value="EUR">Euro</option>
     </select>
-    <button id="button" class="btn btn-success" type="submit" name="button" (click)="triggerCryptoRequest(symbol.value, market.value, '500')"> Submit (May take a few moments for maximum accuracy)</button>
+
+    <br>
+    <button id="button" class="btn btn-success" type="submit" name="button" (click)="triggerCryptoRequest(symbol.value, market.value, '500')"> Submit - takes few moments for maximum accuracy</button>
   </form>
   <div class="jumbotron" *ngIf="rate !== ''">{{rate}} {{market.value}}</div>
 </div>

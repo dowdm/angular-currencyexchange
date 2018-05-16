@@ -18,7 +18,10 @@ export class LoginComponent implements OnInit {
   accountToDisplay;
   exchanges: any[]=null;
   rate: string = "";
+  rate2: string = "";
   result: number = 0;
+  result2: number = 0;
+  time: string = "";
 
   constructor(private accountsService: AccountsService, private apiDataService: ApiDataService, private route: ActivatedRoute) { }
 
@@ -36,19 +39,40 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  triggerBuyRequest(destination: string, amount: string) {
+  triggerBuyRequest(accountToUpdate: string, destination: string, amount: string) {
     this.apiDataService.buyCurrencyExchangeRate(destination).subscribe(response => {
         this.exchanges = response.json();
         this.rate = this.exchanges["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
         this.result = (parseFloat(amount) * parseFloat(this.rate));
+        if(this.result.toString() === 'NaN'){
+          alert("Transaction error! Please try again. You won't be charged twice.");
+        } else {
+          this.accountsService.assetsUpdate(accountToUpdate, this.result, destination);
+          this.accountsService.balanceUpdate(accountToUpdate, amount);
+        }
     });
   }
 
-  triggerBalanceUpdate(accountToUpdate, amount){
-      this.accountsService.balanceUpdate(accountToUpdate, amount);
+  triggerBuyCryptoRequest(accountToUpdate: string, symbol: string, amount2: string) {
+    this.apiDataService.buyCryptoExchangeRate(symbol).subscribe(response => {
+        this.exchanges = response.json();
+        this.time = this.exchanges[ "Meta Data"]["7. Last Refreshed"];
+        this.rate2 = this.exchanges["Time Series (Digital Currency Intraday)"][this.time]["1b. price (USD)"];
+        this.result2 = (parseFloat(amount2) / parseFloat(this.rate2));
+        if(this.result2.toString() === 'NaN'){
+          alert("Transaction error! Please try again. You won't be charged twice.");
+        } else {
+          this.accountsService.assetsUpdate(accountToUpdate, this.result2, symbol);
+          this.accountsService.balanceUpdate(accountToUpdate, amount2);
+        }
+    });
   }
 
-  triggerAssetUpdate(accountToUpdate, result, destination){
-      this.accountsService.assetsUpdate(accountToUpdate, result, destination);
-  }
+  // triggerBalanceUpdate(accountToUpdate: string, amount: number){
+  //     this.accountsService.balanceUpdate(accountToUpdate, amount);
+  // }
+
+  // triggerAssetUpdate(accountToUpdate, result, destination){
+  //     this.accountsService.assetsUpdate(accountToUpdate, result, destination);
+  // }
 }
