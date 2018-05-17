@@ -1,26 +1,27 @@
 # Financial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5. It will help a user find out the healthiest and easy vegan foods. May 17, 2018.
 
-####_**By Matt , Bella vanillo, Semhar Kidane**_
+#### _**By Matt , Bella Vanillo, Semhar Kidane**_
 
 ## Description
 
-This app will help you exchange currency in different country currency and buy different cryptos in either Euros or Dollars. It will give you, the exchange rates of different currencies as well.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5. It allows user to look up current crypto and foreign currency rates, log in to an account and buy currencies. May 17, 2018.
+
 
 ### User Story
 
 Behavior | Input | Output
 ---------|-------|-------
+choose your crypto type | Bitcoin | 8345.890 USD
+Enter currency amount | choose currency from | choose currency to convert to & submit
+
 * Log in with your enabled google-Firebase account
-* user has an account with details of name, initial Deposit, balance and assets
-* Create a hard coded country code input
-* Enter currency amount | choose currency from | choose currency to convert to & submit
-* choose your crypto type | Bitcoin | 8345.890 USD
+* user has an account with details of name, balance and assets
+
 
 
 ##Setup Requirements
-
+* View the project at
 * Clone repo from Github.
 * cd into the project and "npm install" on the terminal.
 * Enter atom . to open the project on an atom.
@@ -42,28 +43,10 @@ If you run into any issues or have questions, ideas or concerns, contact us at *
 ## Technologies Used
 
 * Javascript ES6
-* Npm
+* Angular
+* Bootstrap
 * Jasmine, Karma
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
@@ -73,4 +56,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 MIT License
 
-Copyright (c) 2018 **_Semhar Kidane_**, **_Matt_**, **_Bella vanillo_**
+Copyright (c) 2018 **_Semhar Kidane_**, **_Matt Dowdney_**, **_Bella Vanillo_**
