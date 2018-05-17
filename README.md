@@ -21,7 +21,7 @@ Enter currency amount | choose currency from | choose currency to convert to & s
 
 
 ##Setup Requirements
-* View the project at
+* View the project at https://angular-financial.firebaseapp.com
 * Clone repo from Github.
 * cd into the project and "npm install" on the terminal.
 * Enter atom . to open the project on an atom.
