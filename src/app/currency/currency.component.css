@@ -17,3 +17,12 @@
   background-size: cover;
   background-position: center;
 }*/
+
+button{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.printout{
+  text-align: center;
+  font-size: 20px;
+}

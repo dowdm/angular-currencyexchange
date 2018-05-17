@@ -1,7 +1,8 @@
 <div class="container">
   <form id="currencies">
+     <h2>Foreign Currency Exchange Rates</h2>
     <div class="row">
-      <label for="">Enter an amount</label>
+      <label for="">Enter an amount to convert:</label>
       <input class="form-control" type="number" placeholder="0" name="amount" value="" #amount>
     </div>
     <br>
@@ -349,9 +350,10 @@
         </select>
 
       <button id="button" class="btn btn-success " type="click" name="button" (click)="triggerExchangeRequest(source.value, destination.value, amount.value)"> Submit </button>
-
-    <p>Exchange Rate: {{rate}}</p>
-    <p *ngIf="destination.value !== 'XUA'">{{result}} {{destination.value}}</p>
+      <div class="printout" *ngIf="destination.value !== 'XUA'">
+          <p >Exchange Rate: 1 {{source.value}}={{rate}} {{destination.value}}</p>
+          <p >{{amount.value}} {{source.value}} = {{result}} {{destination.value}}</p>
+        </div>
   </form>
 </div>
 
