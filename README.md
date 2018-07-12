@@ -1,7 +1,7 @@
 # Financial
 
 
-#### _**By Matt , Bella Vanillo, Semhar Kidane**_
+#### _**By Matt Dowdney, Bella Vanillo, Semhar Kidane**_
 
 ## Description
 
